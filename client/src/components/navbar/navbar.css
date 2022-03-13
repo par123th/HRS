@@ -1,0 +1,29 @@
+.landing-navbar {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	padding: 2rem 0rem;
+	font-family: var(--font-family);
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 12;
+	backdrop-filter: blur(10px);
+}
+
+.landing-navbar .landing-navbar-links {
+	gap: 4rem;
+	display: flex;
+	font-size: 1.1rem;
+	font-weight: 500;
+	margin: 0 4rem;
+}
+
+.landing-navbar .landing-navbar-links p {
+	color: var(--color-navlinks);
+	transition: 0.2s all ease;
+}
+
+.landing-navbar .landing-navbar-links p:hover {
+	color: rgb(0, 0, 0);
+}

@@ -1,0 +1,59 @@
+.landing-page header {
+	height: 100vh;
+}
+
+header {
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	/* background-position: center; */
+	background-size: cover;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 3rem;
+	font-family: var(--font-family);
+	color: var(--color-navlinks);
+	font-size: 1rem;
+	font-weight: 500;
+}
+
+header .search-bar {
+	display: flex;
+	gap: 2rem;
+}
+
+.search-bar {
+	width: 40vw;
+}
+
+input {
+	width: 100%;
+	border: 1px solid var(--color-input-border);
+	padding: 1rem 2rem;
+	border-radius: 0.9rem;
+	font-family: Inter;
+	font-size: 1rem;
+	font-weight: 400;
+}
+
+input:active,
+input:focus {
+	outline: none;
+}
+
+input:placeholder {
+	color: var(--color-input-placeholder);
+}
+
+button {
+	background-color: #dadada8e;
+	color: rgb(0, 0, 0);
+	font-family: Inter;
+	font-size: 1rem;
+	font-weight: 400;
+	border: none;
+	padding: 1.1rem 2.75rem;
+	border-radius: 0.9rem;
+}
