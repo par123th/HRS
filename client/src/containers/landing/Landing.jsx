@@ -17,7 +17,17 @@ const Landing = () => {
 					Once a year go someplace you've never been before.
 				</h1>
 				<div className="search-bar">
+					<div className="custom-select">
+						<select name="countries" id="countries">
+							<option value="India">India</option>
+							<option value="India">India</option>
+							<option value="India">India</option>
+							<option value="India">India</option>
+							<option value="India">India</option>
+						</select>
+					</div>
 					<input
+						class="search-bar-input"
 						type="text"
 						placeholder="Look up for a hotel, location, country"
 					/>
