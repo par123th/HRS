@@ -1,7 +1,7 @@
 import React from 'react';
 import './landing.css';
 
-import { Navbar } from './../../components';
+import { Navbar, CTAButton } from './../../components';
 
 const Landing = () => {
 	return (
@@ -27,11 +27,11 @@ const Landing = () => {
 						</select>
 					</div>
 					<input
-						class="search-bar-input"
+						className="search-bar-input"
 						type="text"
 						placeholder="Look up for a hotel, location, country"
 					/>
-					<button>Search</button>
+					<CTAButton text="Search" />
 				</div>
 				{/* Search bar */}
 			</header>

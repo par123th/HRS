@@ -25,7 +25,9 @@ const Navbar = () => {
 	return (
 		<div className="landing-navbar">
 			<div className="landing-logo logo">
-				<h2>safarr</h2>
+				<h2>
+					<a href="/">safarr</a>
+				</h2>
 			</div>
 			<div className="landing-navbar-links">
 				<NavLinks />

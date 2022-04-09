@@ -19,6 +19,10 @@
 	margin: 0 4rem;
 }
 
+.landing-navbar .landing-navbar-links {
+	color: var(--color-navlinks);
+}
+
 .landing-navbar .landing-navbar-links p {
 	color: var(--color-navlinks);
 	transition: 0.2s all ease;

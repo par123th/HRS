@@ -1,5 +1,5 @@
 import React from 'react';
-import { Landing, Login } from './containers';
+import { Landing, Login, Signup } from './containers';
 import './app.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
@@ -10,6 +10,7 @@ function App() {
 				<Routes>
 					<Route exact path="/" element={<Landing />} />
 					<Route path="/login" element={<Login />} />
+					<Route path="/signup" element={<Signup />} />
 				</Routes>
 			</BrowserRouter>
 		</div>

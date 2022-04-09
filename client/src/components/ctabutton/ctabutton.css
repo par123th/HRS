@@ -1,0 +1,10 @@
+.cta-button {
+	background-color: #f7f7f7b8;
+	color: rgb(0, 0, 0);
+	font-family: Inter;
+	font-size: 1rem;
+	font-weight: 400;
+	border: none;
+	padding: 1.1rem 2.75rem;
+	border-radius: 0.9rem;
+}

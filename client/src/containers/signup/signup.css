@@ -1,4 +1,4 @@
-.login-page {
+.signup-page {
 	background: linear-gradient(89.83deg, #d2ebff 1.11%, #f3faff 99.88%);
 	height: 100vh;
 	display: flex;
@@ -7,7 +7,7 @@
 	justify-content: center;
 }
 
-.login {
+.signup {
 	position: relative;
 	display: flex;
 	flex-direction: column;
