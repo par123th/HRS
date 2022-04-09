@@ -1,0 +1,47 @@
+.user-page {
+	background: linear-gradient(89.83deg, #d2ebff 1.11%, #f3faff 99.88%);
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 2rem;
+	font-family: var(--font-family);
+}
+
+.details-wrap {
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+}
+
+.round {
+	background: linear-gradient(89.83deg, #8585851a 1.11%, #4141413f 99.88%);
+	border-radius: 50%;
+	height: 70px;
+	width: 70px;
+}
+
+.first,
+.last,
+.username,
+.email {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	gap: 0.5rem;
+	font-size: 1.25rem;
+}
+
+.history {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	gap: 0.85rem;
+	font-size: 1.25rem;
+}
+
+.tag {
+	font-weight: 600;
+}
