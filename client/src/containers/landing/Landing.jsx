@@ -31,7 +31,9 @@ const Landing = () => {
 						type="text"
 						placeholder="Look up for a hotel, location, country"
 					/>
-					<CTAButton text="Search" />
+					<a href="/search">
+						<CTAButton text="Search" />
+					</a>
 				</div>
 				{/* Search bar */}
 			</header>
