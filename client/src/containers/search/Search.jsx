@@ -21,35 +21,36 @@ const Search = () => {
 	const rows = [
 		{
 			key: '1',
-			hotel_name: 'Armani Hotel Milano',
-			average_score: 9.8,
-			hotel_address: 'Piazza Duca D Aosta 9, Central Station, 20124'
+			hotel_name: 'Excelsior Hotel Gallia Luxury Collection Hotel',
+			average_score: 9.4,
+			hotel_address: 'Piazza Duca D Aosta 9 Central Station 20124 Mi...'
 		},
 		{
 			key: '2',
-			hotel_name: 'Armani Hotel Milano',
-			average_score: 9.1,
-			hotel_address: 'Piazza Duca D Aosta 9, Central Station, 20124'
+			hotel_name: 'Palazzo Parigi Hotel Grand Spa Milano',
+			average_score: 9.3,
+			hotel_address: 'Corso Di Porta Nuova 1 Milan City Center 20121...'
 		},
 		{
 			key: '3',
-			hotel_name: 'Armani Hotel Milano',
-			average_score: 8.5,
-			hotel_address: 'Piazza Duca D Aosta 9, Central Station, 20124'
+			hotel_name: 'Hotel Spadari Al Duomo',
+			average_score: 9.3,
+			hotel_address: 'Via Spadari 11 Milan City Center 20123 Milan I...'
 		},
 		{
 			key: '4',
-			hotel_name: 'Armani Hotel Milano',
-			average_score: 8.8,
-			hotel_address: 'Piazza Duca D Aosta 9, Central Station, 20124'
+			hotel_name: 'Room Mate Giulia',
+			average_score: 9.3,
+			hotel_address: 'Silvio Pellico 4 Milan City Center 20121 Milan...'
 		},
 		{
 			key: '5',
-			hotel_name: 'Armani Hotel Milano',
-			average_score: 7.5,
-			hotel_address: 'Piazza Duca D Aosta 9, Central Station, 20124'
+			hotel_name: 'UNA Maison Milano',
+			average_score: 9.3,
+			hotel_address: 'Via Mazzini 4 Milan City Center 20123 Milan Italy'
 		}
 	];
+
 	return (
 		<div className="search-page">
 			<Navbar />

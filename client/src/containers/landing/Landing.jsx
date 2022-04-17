@@ -1,5 +1,6 @@
 import React from 'react';
 import './landing.css';
+import { listOfCountries } from './util';
 
 import { Navbar, CTAButton } from './../../components';
 
@@ -19,11 +20,9 @@ const Landing = () => {
 				<div className="search-bar">
 					<div className="custom-select">
 						<select name="countries" id="countries">
-							<option value="India">India</option>
-							<option value="India">India</option>
-							<option value="India">India</option>
-							<option value="India">India</option>
-							<option value="India">India</option>
+							{listOfCountries.map((it) => (
+								<option value={it}>{it}</option>
+							))}
 						</select>
 					</div>
 					<input
