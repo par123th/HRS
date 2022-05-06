@@ -1,7 +1,12 @@
 import React from 'react';
 import './landing.css';
+<<<<<<< HEAD
 import { useRef } from 'react';
 import '../../components/ctabutton/ctabutton.css'
+=======
+import { listOfCountries } from './util';
+
+>>>>>>> 4ff2a94ecb5c07d9a4bb810a4ea31d0d18f5cae6
 import { Navbar, CTAButton } from './../../components';
 import axios from 'axios';
 import { useState } from 'react';
@@ -42,12 +47,19 @@ const Landing = () => {
 				</h1>
 				<div className="search-bar">
 					<div className="custom-select">
+<<<<<<< HEAD
 						<select ref={country} name="countries" id="countries">
 							<option value="Austria">Austria</option>
 							<option value="Spain">Spain</option>
 							<option value="Netherlands">Netherlands</option>
 							<option value="Italy">Italy</option>
 							<option value="France">France</option>
+=======
+						<select name="countries" id="countries">
+							{listOfCountries.map((it) => (
+								<option value={it}>{it}</option>
+							))}
+>>>>>>> 4ff2a94ecb5c07d9a4bb810a4ea31d0d18f5cae6
 						</select>
 					</div>
 					<input ref={des}
