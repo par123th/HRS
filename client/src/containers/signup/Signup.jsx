@@ -1,44 +1,49 @@
 import React from 'react';
 import './signup.css';
 import { Navbar, CTAButton } from './../../components';
+import firebase from 'firebase/compat/app';
+import { auth } from '../../firebase'
+import '../../components/ctabutton/ctabutton.css'
+import { useRef } from 'react';
+
 
 const Signup = () => {
+	const emailRef = useRef('')
+	const pwdRef = useRef('')
+
+	const signup = (e) => {
+		e.preventDefault()
+		auth.createUserWithEmailAndPassword(
+			emailRef.current.value,
+			pwdRef.current.value
+		).then((authUser) => {
+		alert('User created !!')
+		})
+		.catch((error) => {
+			alert(error.message)
+		})
+	}
+
 	return (
 		<div className="signup-page">
 			<Navbar />
 			<div className="signup">
-				<input
-					className="input"
-					id="email"
-					type="text"
-					placeholder="Email ID"
-				/>
-				<input
-					className="input"
-					id="firstname"
-					type="text"
-					placeholder="First Name"
-				/>
-				<input
-					className="input"
-					id="lastname"
-					type="text"
-					placeholder="Last Name"
-				/>
-				<input
+			<input
 					className="input"
 					id="username"
 					type="text"
-					placeholder="Create Username"
+					placeholder="Email"
+					ref={emailRef}
 				/>
 				<input
 					className="input"
 					id="password"
 					type="password"
-					placeholder="Create Password"
+					placeholder="Password"
+					ref={pwdRef}
 				/>
 				<a href="/login">
-					<CTAButton text="Sign Up" />
+				<button type="submit" className="cta-button" onClick={signup}>Sign Up</button>
 				</a>
 				<p className="signup-desc">
 					Already have an account - <a href="/login">Log In Here</a>

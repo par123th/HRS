@@ -15,7 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from recommender.views import get_results
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('getresult/',get_results)
 ]

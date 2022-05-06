@@ -2,8 +2,24 @@ import React from 'react';
 import { Table } from '@nextui-org/react';
 import { Navbar } from '../../components';
 import './search.css';
+import { useState } from 'react';
+import { useEffect } from 'react';
 
 const Search = () => {
+	const [rows, setRows] = useState([]);
+
+	useEffect(() => {
+
+	function resultHandler(event) {
+		const results = JSON.parse(localStorage.getItem('results'));
+		if (results) {
+		setRows(results);
+		}
+	}
+	
+	window.addEventListener('storage',resultHandler);
+	}, []);
+
 	const columns = [
 		{
 			key: 'hotel_name',
@@ -18,38 +34,38 @@ const Search = () => {
 			label: 'Hotel Address'
 		}
 	];
-	const rows = [
-		{
-			key: '1',
-			hotel_name: 'Armani Hotel Milano',
-			average_score: 9.8,
-			hotel_address: 'Piazza Duca D Aosta 9, Central Station, 20124'
-		},
-		{
-			key: '2',
-			hotel_name: 'Armani Hotel Milano',
-			average_score: 9.1,
-			hotel_address: 'Piazza Duca D Aosta 9, Central Station, 20124'
-		},
-		{
-			key: '3',
-			hotel_name: 'Armani Hotel Milano',
-			average_score: 8.5,
-			hotel_address: 'Piazza Duca D Aosta 9, Central Station, 20124'
-		},
-		{
-			key: '4',
-			hotel_name: 'Armani Hotel Milano',
-			average_score: 8.8,
-			hotel_address: 'Piazza Duca D Aosta 9, Central Station, 20124'
-		},
-		{
-			key: '5',
-			hotel_name: 'Armani Hotel Milano',
-			average_score: 7.5,
-			hotel_address: 'Piazza Duca D Aosta 9, Central Station, 20124'
-		}
-	];
+	// const rows = [
+	// 	{
+	// 		key: '1',
+	// 		hotel_name: 'Armani Hotel Milano',
+	// 		average_score: 9.8,
+	// 		hotel_address: 'Piazza Duca D Aosta 9, Central Station, 20124'
+	// 	},
+	// 	{
+	// 		key: '2',
+	// 		hotel_name: 'Armani Hotel Milano',
+	// 		average_score: 9.1,
+	// 		hotel_address: 'Piazza Duca D Aosta 9, Central Station, 20124'
+	// 	},
+	// 	{
+	// 		key: '3',
+	// 		hotel_name: 'Armani Hotel Milano',
+	// 		average_score: 8.5,
+	// 		hotel_address: 'Piazza Duca D Aosta 9, Central Station, 20124'
+	// 	},
+	// 	{
+	// 		key: '4',
+	// 		hotel_name: 'Armani Hotel Milano',
+	// 		average_score: 8.8,
+	// 		hotel_address: 'Piazza Duca D Aosta 9, Central Station, 20124'
+	// 	},
+	// 	{
+	// 		key: '5',
+	// 		hotel_name: 'Armani Hotel Milano',
+	// 		average_score: 7.5,
+	// 		hotel_address: 'Piazza Duca D Aosta 9, Central Station, 20124'
+	// 	}
+	// ];
 	return (
 		<div className="search-page">
 			<Navbar />
@@ -87,6 +103,7 @@ const Search = () => {
 				</div>
 			</div>
 		</div>
+		
 	);
 };
 

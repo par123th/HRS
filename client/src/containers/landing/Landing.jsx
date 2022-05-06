@@ -1,9 +1,33 @@
 import React from 'react';
 import './landing.css';
-
+import { useRef } from 'react';
+import '../../components/ctabutton/ctabutton.css'
 import { Navbar, CTAButton } from './../../components';
+import axios from 'axios';
+import { useState } from 'react';
+import { useEffect } from 'react';
 
 const Landing = () => {
+	const [results, setResults] = useState(null);
+
+	useEffect(() => {
+	localStorage.setItem('results', JSON.stringify(results));
+	}, [results]);
+
+	const des = useRef('')
+	const country = useRef('')
+	const fetchData = (text,country) => {
+        axios.post('http://localhost:8000/getresult/',JSON.stringify({
+            "description":text,
+			"country":country
+        }))
+            .then(res => {
+                console.log(res.data)
+				setResults(res.data)
+            })
+            .catch(err => {console.log(err)})
+		}
+
 	return (
 		<div className="landing-page">
 			<Navbar />
@@ -18,21 +42,21 @@ const Landing = () => {
 				</h1>
 				<div className="search-bar">
 					<div className="custom-select">
-						<select name="countries" id="countries">
-							<option value="India">India</option>
-							<option value="India">India</option>
-							<option value="India">India</option>
-							<option value="India">India</option>
-							<option value="India">India</option>
+						<select ref={country} name="countries" id="countries">
+							<option value="Austria">Austria</option>
+							<option value="Spain">Spain</option>
+							<option value="Netherlands">Netherlands</option>
+							<option value="Italy">Italy</option>
+							<option value="France">France</option>
 						</select>
 					</div>
-					<input
+					<input ref={des}
 						className="search-bar-input"
 						type="text"
 						placeholder="Look up for a hotel, location, country"
 					/>
-					<a href="/search">
-						<CTAButton text="Search" />
+					<a href="/search" target="_blank">
+					<button type="submit" className="cta-button" onClick={() => {fetchData(des.current.value,country.current.value)}}>Search</button>
 					</a>
 				</div>
 				{/* Search bar */}
